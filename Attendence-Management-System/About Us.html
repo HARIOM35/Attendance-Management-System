@@ -1,0 +1,148 @@
+<div class="about-section">
+    <h1><u>About Us Page</u></h1>
+    <p><b>Online Attendence </b>is made By The Student Of <b>ICFAI University Jharkhand. In this Teacher and Student Can Check Their Attendence percentage.
+       In This Application We can add the feature Those Student Can below 75% they Will notify through email and sms... And also Teacher Will Also 
+       notifid when he/see will not take a class and he/she will take their class below 75%....
+      <br>
+      <br>
+       In this application we can add a features of biometric Attendence with the features of Daily Sms Updates of present/Absent or Percentage of Attendence......
+     <br><br><br>
+     
+     ThankYou....
+<Center>Team Mr. Virus .....</Center>
+    </b> 
+           </p></p>
+  </div>
+  <link rel="stylesheet" type="text/css" href="About Us.css">
+  <h2 style="text-align:center"><u>Our Team</u></h2>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="./Image/Hari Om  2.png" alt="Hari Om " style="width:100%">
+        <div class="container">
+          <h2>Hari Om </h2>
+          <p class="title">CEO & Founder</p>
+          <p>I am a CEO & Founder of This Bank .</p>
+          <p>hariom3572@gmail.com</p>
+          <a href="Contact us.html">
+            <p><button class="button">Contact</button></p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- This is for the fire crackers  -->
+  <script src="https://unpkg.com/element-behaviors@3.1.0/dist/global.js"></script>
+  <h1 has="sparkles"></h1>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #f6f7f3;
+    }
+    
+    body {
+      
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    h1 {color: rgb(75, 7, 247);}
+    table {color: yellow; margin-top: 130px;}
+    
+    .rotation {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    .sparkle {
+      border-radius: 100%;
+      background: #6f00ff;
+      animation-name: sparkles;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    
+    .sparkle1 {animation-duration: 0.5s}
+    .sparkle2 {animation-duration: 0.8s}
+    .sparkle3 {animation-duration: 1s}
+    .sparkle4 {animation-duration: 1.4s}
+    .sparkle5 {animation-duration: 1.8s}
+    .sparkle6 {animation-duration: 2s}
+    
+    @keyframes sparkles {
+      0% {
+        transform: translateX(0px);
+        width: 8px;
+        height: 8px;
+      }
+      100% {
+        transform: translateX(150px);
+        width: 0px;
+        height: 0px;
+      }
+    }
+  </style>
+  
+  <script>
+  
+    elementBehaviors.whenDefined('sparkles').then(() => {
+      console.log('Sparkles are ready!')
+    })
+    setTimeout(() => {
+      class Sparkles {
+  
+        rotations = []
+        
+        connectedCallback(el) {
+          const box = el.getBoundingClientRect()
+          const centerX = box.x + box.width / 2
+          const centerY = box.y + box.height / 2
+  
+          for (const i of Array(50).map((n, i) => i)) {
+            const rotation = document.createElement('div')
+            this.rotations.push(rotation)
+            rotation.classList.add('rotation')
+            rotation.style.transform = `translate3d(${centerX}px, ${centerY}px, 0) rotateZ(${Math.random() * 360}deg)`
+            document.body.append(rotation)
+  
+            const spark = document.createElement('div')
+            spark.classList.add('sparkle')
+            spark.classList.add('sparkle' + (Math.round((Math.random() * (6-1))) + 1))
+            rotation.append(spark)
+          }
+          
+          window.addEventListener('resize', () => {
+            const box = el.getBoundingClientRect()
+            const centerX = box.x + box.width / 2
+            const centerY = box.y + box.height / 2
+            for (const rotation of this.rotations)
+              rotation.style.transform = `translate3d(${centerX}px, ${centerY}px, 0) rotateZ(${Math.random() * 360}deg)`
+          })
+        }
+      }
+      
+      elementBehaviors.define('sparkles', Sparkles)
+    }, 10)
+  </script>
+  
+  
+  
+    <div class="column">
+      <div class="card">
+        <img src="./Image/Aryan.png" alt="Shubham" style="width:100%">
+        <div class="container">
+          <h2>Shubham Kr. Singh</h2>
+          <p class="title">Co-Founder</p>
+          <p>I am a co-founder of this bank.</p>
+          <p>aryansingh12241@gmail.com</p>
+          <a href="Contact us.html"></a>
+            <p><button class="button">Contact</button></p>
+          </a>
+          
+  
+        </div>
+      </div>
+    </div>
+  </div>
